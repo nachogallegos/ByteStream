@@ -1,0 +1,7 @@
+# Excluir credenciales y archivos sensibles
+*.json
+.env
+
+# Excluir archivos generados
+__pycache__
+*.pyc
