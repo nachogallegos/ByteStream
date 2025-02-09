@@ -1,0 +1,9 @@
+bytestream:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      project: bytestream-450003
+      dataset: spotify_data
+      threads: 1
+      keyfile: "C:/Users/nazho/OneDrive/Escritorio/python/ByteStream/credentials.json"  # Ruta del archivo de credenciales

@@ -1,0 +1,28 @@
+[0m10:04:56.785566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022337345BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002233550CE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022338487ED0>]}
+
+
+============================== 10:04:56.789474 | 7da06a4d-e8ea-4d3c-80dd-01856ef8ac7c ==============================
+[0m10:04:56.789474 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:04:56.800111 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\nazho\\OneDrive\\Escritorio\\python\\ByteStream\\byteStream-dbt', 'log_path': 'C:\\Users\\nazho\\OneDrive\\Escritorio\\python\\ByteStream\\byteStream-dbt\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:04:57.556469 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "bytestream", target "dev" invalid: Runtime Error
+    Must specify authentication method
+[0m10:04:57.557896 [debug] [MainThread]: Command `dbt run` failed at 10:04:57.557731 after 1.06 seconds
+[0m10:04:57.558302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002235AB8F100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002235ABD1A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002235AAA3130>]}
+[0m10:04:57.558627 [debug] [MainThread]: Flushing usage events
+[0m10:04:58.834135 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:07:04.928161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028D82C71BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028D80E3CE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028D83DC7ED0>]}
+
+
+============================== 10:07:04.932155 | 027445dd-103c-4bf1-9b99-ab820b020d7a ==============================
+[0m10:07:04.932155 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:07:04.932771 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\nazho\\OneDrive\\Escritorio\\python\\ByteStream\\byteStream-dbt\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\nazho\\OneDrive\\Escritorio\\python\\ByteStream\\byteStream-dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m10:07:05.784434 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "bytestream", target "dev" invalid: Runtime Error
+    Must specify authentication method
+[0m10:07:05.785739 [debug] [MainThread]: Command `dbt run` failed at 10:07:05.785580 after 1.19 seconds
+[0m10:07:05.786050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DA652F100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DA6571A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DA6443130>]}
+[0m10:07:05.786473 [debug] [MainThread]: Flushing usage events
+[0m10:07:07.106140 [debug] [MainThread]: An error was encountered while trying to flush usage events

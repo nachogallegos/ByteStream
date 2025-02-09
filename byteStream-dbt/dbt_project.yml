@@ -1,1 +1,16 @@
- 
+ name: byteStream
+version: '1.0'
+config-version: 2
+
+profile: bytestream  # Este debe coincidir con el nombre del perfil en profiles.yml
+
+source-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  byteStream:
+    +materialized: table
+
