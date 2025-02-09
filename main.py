@@ -52,17 +52,21 @@ def extract_data(request):
         table_id = 'bytestream-450003.spotify_data.spotify_artists_data'  # ID completo de la tabla
 
         # Convertir los datos de los artistas a un formato adecuado para BigQuery
-        rows_to_insert = [
-            {
+        rows_to_insert = []
+        
+        for artist in artist_data_all:
+            # Asegurarse de que followers sea un número (INTEGER) y images sea un array de strings
+            followers = artist["followers"]["total"] if "followers" in artist and isinstance(artist["followers"], dict) else 0
+            rows_to_insert.append({
                 "artist_id": artist["id"],
                 "artist_name": artist["name"],
-                "followers": artist["followers"],
+                "followers": followers,  # Ahora obtenemos el total de seguidores
                 "genres": artist["genres"],
-                "images": artist["images"] if isinstance(artist["images"], list) else [],  # Asegúrate de que sea un array de strings,
+                "images": [img["url"] for img in artist["images"]] if isinstance(artist["images"], list) else [],  # Asegúrate de que sea un array de URLs
                 "popularity": artist["popularity"]
-            }
-            for artist in artist_data_all
-        ]
+            })
+
+
 
         # Inserción de datos en BigQuery
         errors = bq_client.insert_rows_json(table_id, rows_to_insert)
