@@ -1,24 +1,33 @@
-# ByteStream - Integración de API con Google Cloud Functions y Spotify
+# ByteStream - Integración de API con Google Cloud Functions, DBT y Spotify
 
 ## Descripción
 
-**ByteStream** es un proyecto que extrae datos de Spotify (información de artistas) usando la API de Spotify, y guarda esos datos en **Google Cloud Storage** utilizando **Google Cloud Functions**.
+**ByteStream** es un proyecto que extrae datos de Spotify (información de artistas) usando la API de Spotify, los almacena en **Google Cloud Storage** y **BigQuery**, y luego transforma esos datos utilizando **DBT**. El flujo de trabajo está automatizado en **Google Cloud Functions**.
 
 ## Características
 
 - **Autenticación**: Obtención de un **Access Token** de Spotify usando las credenciales de la API.
 - **Extracción de Datos**: Obtención de información de artistas de Spotify.
-- **Almacenamiento en Google Cloud**: Los datos extraídos se guardan en un bucket de **Google Cloud Storage**.
-- **Despliegue en Google Cloud Functions**: La función se despliega en **Google Cloud Functions** para su ejecución sin servidor.
+- **Almacenamiento en Google Cloud**: Los datos extraídos se guardan en un **bucket de Google Cloud Storage** y en **BigQuery**.
+- **Transformación con DBT**: Usando **DBT** para transformar los datos en **BigQuery**.
+- **Automatización en Google Cloud Functions**: La función se despliega en **Google Cloud Functions** para su ejecución sin servidor.
 
 ## Cómo ejecutar el proyecto
 
 ### Requisitos:
-
 - Python 3.10 o superior
 - Google Cloud SDK instalado
-- Spotify API credentials
-- Google Cloud Storage credentials
+- **Spotify API credentials**
+- **Google Cloud Storage credentials**
+- **DBT (Data Build Tool)** instalado
+
+### Pasos para ejecutar localmente:
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/ByteStream.git
+
 
 ### Pasos para ejecutar localmente:
 
